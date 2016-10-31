@@ -20,6 +20,5 @@ document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(<Root store={store} />, root);
 
   // TODO: testing
-  window.store = store
-  // store.dispatch(login({user: {username: 'caleb', password: 'password'}}))
+  window.store = store;
 })

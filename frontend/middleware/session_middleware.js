@@ -18,15 +18,15 @@ export default ({getstate, dispatch}) => (next) => (action) => {
 
   switch (action.type) {
     case LOGIN:
-      login(action.user, success, errors)
-      return next(action)
+      login(action.user, success, errors);
+      return next(action);
     case LOGOUT:
-      logout(success, errors)
-      return next(action)
+      logout(success, errors);
+      return next(action);
     case SIGNUP:
-      signup(action.user, success, errors)
-      return next(action)
+      signup(action.user, success, errors);
+      return next(action);
     default:
-      return next(action)
+      return next(action);
   }
 }

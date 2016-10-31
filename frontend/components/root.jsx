@@ -6,7 +6,7 @@ import SessionFormContainer from './session/session_form_container';
 
 const _redirectIfLoggedIn = () => {
   if(window.currentUser) {
-    hashHistory.replace('/')
+    hashHistory.replace('/');
   }
 }
 
