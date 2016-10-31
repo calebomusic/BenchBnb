@@ -11,7 +11,6 @@ import { hashHistory } from 'react-router';
 
 export default ({getstate, dispatch}) => (next) => (action) => {
   const success = (user) => {
-    debugger
     dispatch(receiveCurrentUser(user));
     hashHistory.replace('/');
   }

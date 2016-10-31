@@ -1,6 +1,6 @@
 class User < ApplicationRecord
-  validates :username, :password_digest, :session_token, presence: true
-  validates :password, length: { minimum: 6 }
+  validates :username, :password_digest, presence: true
+  validates :password, length: { minimum: 6, allow_nil: true }
 
   attr :password
 
@@ -17,6 +17,8 @@ class User < ApplicationRecord
 
   def reset_session_token!
     self.session_token = User.generate_session_token
+    self.save
+    self.session_token
   end
 
   def User.generate_session_token
