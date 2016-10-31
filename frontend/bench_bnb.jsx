@@ -13,5 +13,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // TODO: testing
   window.store = store
-  store.dispatch(login({user: {username: 'caleb', password: 'password'}}))
+  // store.dispatch(login({user: {username: 'caleb', password: 'password'}}))
 })

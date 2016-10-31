@@ -7,7 +7,6 @@ const null_user = {
 }
 
 export default (state = null_user, action) => {
-  // const newState = merge({}, state)
   Object.freeze(state)
   switch (action.type) {
     case RECEIVE_CURRENT_USER:

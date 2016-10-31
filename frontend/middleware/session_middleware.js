@@ -3,12 +3,18 @@ import { receiveCurrentUser,
          LOGIN,
          LOGOUT,
          SIGNUP
-       } from '../actions/session_actions'
+       } from '../actions/session_actions';
 
-import { login, signup, logout } from '../util/session_api_util'
+import { login, signup, logout } from '../util/session_api_util';
+import { hashHistory } from 'react-router';
+
 
 export default ({getstate, dispatch}) => (next) => (action) => {
-  const success = (user) => dispatch(receiveCurrentUser(user))
+  const success = (user) => {
+    debugger
+    dispatch(receiveCurrentUser(user));
+    hashHistory.replace('/');
+  }
   const errors = (errors) => dispatch(receiveErrors(errors))
 
   switch (action.type) {
